@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Teorema de Pitágoras</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+    
+
+    <body>
+       <h2>Calculadora do Teorema de Pitágoras</h2>
+    </br>
+    </br>   
+        <label for="catetoOposto">Cateto Oposto (b)</label>
+        <input type="number" class="form-control" id="catetoOposto"> 
+    </br>
+    </br>
+        <label for="catetoAdjacente">Cateto Adjacente (c)</label>
+        <input type="number" class="form-control" id="catetoAdjacente">
+    </br>
+    </br>
+        <button type="button" class="btn btn-primary" onclick="Calcula()">Calcular</button>
+    </br> 
+    </br>
+
+        <label for="hipotenusa">Hipotenusa</label>
+        <input type="number" class="form-control" id="hipotenusa">
+
+        <script>
+            function Calcula() {
+                var catetoOposto = document.getElementById("catetoOposto").value;
+                var catetoAdjacente = document.getElementById("catetoAdjacente").value;
+    
+                var hipotenusa = Math.sqrt( Math.pow(catetoOposto, 2) + Math.pow(catetoAdjacente, 2));
+    
+                var inputHipotenusa = document.getElementById("hipotenusa");
+                inputHipotenusa.value = hipotenusa;
+    
+            }
+        </script>
+
+            
+    </body>
+</html>
